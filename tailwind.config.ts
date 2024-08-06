@@ -8,10 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      keyframes: {
+        popIn: {
+          "0%": { transfrom: "scale(0.8)", opacity: "0" },
+          "80%": { transfrom: "scale(1.1)", opacity: "1" },
+          "100%": { transfrom: "scale(1)" },
+        },
+      },
+      animation: {
+        popIn: "popIn 1s ease-out forwards",
       },
     },
   },
