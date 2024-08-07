@@ -17,7 +17,7 @@ export default function Form() {
 
   return (
     <div className="py-20">
-      <div className="flex flex-col items-center max-w-sm mx-auto">
+      <div className="flex flex-col items-center max-w-md mx-auto">
         <span>
           <FireIcon className="text-red-400 size-12" />
         </span>
@@ -31,6 +31,7 @@ export default function Form() {
             placeholder="Email"
             required
             icon={<EnvelopeIcon className="text-gray-500 size-4" />}
+            errors={state?.errors?.fieldErrors.email ?? []}
           />
           <FormInput
             type="username"
@@ -38,6 +39,7 @@ export default function Form() {
             placeholder="Username"
             required
             icon={<UserIcon className="text-gray-500 size-4" />}
+            errors={state?.errors?.fieldErrors.username ?? []}
           />
           <FormInput
             type="password"
@@ -45,7 +47,7 @@ export default function Form() {
             placeholder="Password"
             required
             icon={<KeyIcon className="text-gray-500 size-4" />}
-            errors={state?.errors ?? []}
+            errors={state?.errors?.fieldErrors.password ?? []}
           />
           <FormButton text="Log in" />
         </form>
