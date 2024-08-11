@@ -10,9 +10,8 @@ import {
 import { handleForm } from "./action";
 import { useFormState } from "react-dom";
 import FormInput from "@/components/form-input";
-import { CheckCircleIcon } from "@heroicons/react/24/outline";
 
-export default function Form() {
+export default function LogIn() {
   const [state, formAction] = useFormState(handleForm, null);
 
   return (
@@ -31,7 +30,7 @@ export default function Form() {
             placeholder="Email"
             required
             icon={<EnvelopeIcon className="text-gray-500 size-4" />}
-            errors={state?.errors?.fieldErrors.email ?? []}
+            errors={state?.fieldErrors.email ?? []}
           />
           <FormInput
             type="username"
@@ -39,7 +38,7 @@ export default function Form() {
             placeholder="Username"
             required
             icon={<UserIcon className="text-gray-500 size-4" />}
-            errors={state?.errors?.fieldErrors.username ?? []}
+            errors={state?.fieldErrors.username ?? []}
           />
           <FormInput
             type="password"
@@ -47,16 +46,16 @@ export default function Form() {
             placeholder="Password"
             required
             icon={<KeyIcon className="text-gray-500 size-4" />}
-            errors={state?.errors?.fieldErrors.password ?? []}
+            errors={state?.fieldErrors.password ?? []}
           />
           <FormButton text="Log in" />
         </form>
-        {state?.isValidate && (
+        {/* {state?.isValidate && (
           <div className="flex items-center w-full h-10 gap-2 px-3 bg-emerald-500 rounded-xl animate-popIn">
             <CheckCircleIcon className="size-4" strokeWidth={2} />
             <span className="text-sm">Welcome back!</span>
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );
