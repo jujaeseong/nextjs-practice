@@ -46,7 +46,7 @@ export default function TweetList({ initialTweets }: TweetListProps) {
 
   return (
     <>
-      <div className="flex flex-col items-center border border-black">
+      <div className="flex flex-col items-center border border-black w-full">
         {tweets.map((tweet) => (
           <TweetSummary key={tweet.id} {...tweet} />
         ))}

@@ -1,3 +1,4 @@
+import AddTweet from "@/components/add-tweet";
 import TweetList from "@/components/tweet-list";
 import db from "@/lib/db";
 import { FireIcon } from "@heroicons/react/24/solid";
@@ -34,6 +35,7 @@ export default async function Home() {
         <span>
           <FireIcon className="text-red-400 size-12" />
         </span>
+        <AddTweet />
         <TweetList initialTweets={initialTweets} />
       </div>
     </div>

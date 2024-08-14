@@ -18,3 +18,5 @@ export const INCORRECT_PASSWORD_ERROR =
 export const USERNAME_DUPLICATE_ERROR = "This username is already taken";
 export const EMAIL_DUPLICATE_ERROR = "This email is already taken";
 export const CONFIRM_PASSWORD_ERROR = "Passwords must be the same.";
+
+export const TWEET_REQUIRED_ERROR = "Please fill out the required fields.";
